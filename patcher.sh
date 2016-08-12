@@ -15,15 +15,9 @@ cd $ROM_TREE/frameworks/av
 git clean -f -d && git reset --hard
 cd $ROM_TREE/frameworks/base
 git clean -f -d && git reset --hard
-cd $ROM_TREE/frameworks/opt/telephony
-git clean -f -d && git reset --hard
-cd $ROM_TREE/packages/apps/Dialer
-git clean -f -d && git reset --hard
 cd $ROM_TREE/packages/apps/Messaging
 git clean -f -d && git reset --hard
 cd $ROM_TREE/packages/apps/Nfc
-git clean -f -d && git reset --hard
-cd $ROM_TREE/packages/services/Telephony
 git clean -f -d && git reset --hard
 cd $ROM_TREE/system/core
 git clean -f -d && git reset --hard
@@ -33,7 +27,6 @@ git clean -f -d && git reset --hard
 cd $ROM_TREE
 
 ### Useful upstream patches not present on the branch in use
-patch -d frameworks/opt/telephony		-p1 -s -N --no-backup-if-mismatch < $BRANCH/frameworks-opt-telephony1.patch
 patch -d packages/apps/Nfc			-p1 -s -N --no-backup-if-mismatch < $BRANCH/packages-apps-Nfc0.patch
 
 cd $ROM_TREE
