@@ -13,11 +13,9 @@ cd $ROM_TREE/packages/apps/Messaging
 git clean -f -d && git reset --hard
 cd $ROM_TREE/packages/apps/Nfc
 git clean -f -d && git reset --hard
-cd $ROM_TREE/packages/apps/Settings
-git clean -f -d && git reset --hard
 cd $ROM_TREE/system/core
 git clean -f -d && git reset --hard
-cd $ROM_TREE/vendor/cm
+cd $ROM_TREE/vendor/aicp
 git clean -f -d && git reset --hard
 
 cd $ROM_TREE
