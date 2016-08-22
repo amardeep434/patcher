@@ -15,17 +15,10 @@ cd $ROM_TREE/frameworks/av
 git clean -f -d && git reset --hard
 cd $ROM_TREE/frameworks/base
 git clean -f -d && git reset --hard
-cd $ROM_TREE/packages/apps/Nfc
-git clean -f -d && git reset --hard
 cd $ROM_TREE/system/core
 git clean -f -d && git reset --hard
 cd $ROM_TREE/vendor/aicp
 git clean -f -d && git reset --hard
-
-cd $ROM_TREE
-
-### Useful upstream patches not present on the branch in use
-patch -d packages/apps/Nfc			-p1 -s -N --no-backup-if-mismatch < $BRANCH/packages-apps-Nfc0.patch
 
 cd $ROM_TREE
 
