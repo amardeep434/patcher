@@ -17,8 +17,6 @@ cd $ROM_TREE/frameworks/base
 git clean -f -d && git reset --hard
 cd $ROM_TREE/system/core
 git clean -f -d && git reset --hard
-cd $ROM_TREE/vendor/aicp
-git clean -f -d && git reset --hard
 
 cd $ROM_TREE
 
@@ -33,7 +31,3 @@ patch -d frameworks/base			-p1 -s -N --no-backup-if-mismatch < $CUSTOM/framework
 patch -d frameworks/base			-p1 -s -N --no-backup-if-mismatch < $CUSTOM/frameworks-base4.patch
 patch -d system/core				-p1 -s -N --no-backup-if-mismatch < $CUSTOM/system-core0.patch
 patch -d system/core				-p1 -s -N --no-backup-if-mismatch < $CUSTOM/system-core1.patch
-
-# Get APN list from nightly branch and apply patch on top
-curl -s $APN_LIST_URL > vendor/aicp/prebuilt/common/etc/apns-conf.xml
-patch -d vendor/aicp				-p1 -s -N --no-backup-if-mismatch < $CUSTOM/vendor-cm0.patch
