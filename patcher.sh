@@ -16,10 +16,6 @@ cd $ROM_TREE/frameworks/base
 git clean -f -d && git reset --hard
 cd $ROM_TREE/frameworks/native
 git clean -f -d && git reset --hard
-cd $ROM_TREE/packages/apps/Gallery2
-git clean -f -d && git reset --hard
-cd $ROM_TREE/packages/apps/LockClock
-git clean -f -d && git reset --hard
 cd $ROM_TREE/system/core
 git clean -f -d && git reset --hard
 
@@ -29,15 +25,8 @@ cd $ROM_TREE
 patch -d build					-p1 -s -N --no-backup-if-mismatch < $SULTAN/build0.patch
 patch -d frameworks/av				-p1 -s -N --no-backup-if-mismatch < $SULTAN/frameworks-av0.patch
 patch -d frameworks/base			-p1 -s -N --no-backup-if-mismatch < $SULTAN/frameworks-base0.patch
-patch -d frameworks/base			-p1 -s -N --no-backup-if-mismatch < $SULTAN/frameworks-base1.patch
-patch -d frameworks/base			-p1 -s -N --no-backup-if-mismatch < $SULTAN/frameworks-base2.patch
 patch -d frameworks/base			-p1 -s -N --no-backup-if-mismatch < $SULTAN/frameworks-base3.patch
 patch -d frameworks/base			-p1 -s -N --no-backup-if-mismatch < $SULTAN/frameworks-base4.patch
-patch -d frameworks/base			-p1 -s -N --no-backup-if-mismatch < $SULTAN/frameworks-base5.patch
 patch -d frameworks/native			-p1 -s -N --no-backup-if-mismatch < $SULTAN/frameworks-native0.patch
-patch -d packages/apps/LockClock		-p1 -s -N --no-backup-if-mismatch < $SULTAN/packages-apps-LockClock0.patch
 patch -d system/core				-p1 -s -N --no-backup-if-mismatch < $SULTAN/system-core0.patch
 patch -d system/core				-p1 -s -N --no-backup-if-mismatch < $SULTAN/system-core1.patch
-
-### Custom patches
-patch -d packages/apps/Gallery2			-p1 -s -N --no-backup-if-mismatch < $CUSTOM/packages-apps-Gallery20.patch
